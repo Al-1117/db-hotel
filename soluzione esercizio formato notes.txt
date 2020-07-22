@@ -1,0 +1,32 @@
+Seleziona tutti gli ospiti che sono stati identificati con la carta di identità
+
+	- comando in phpMyAdmin: 
+	SELECT * FROM `ospiti` WHERE `document_type` = "CI"
+
+Seleziona tutti gli ospiti che sono nati dopo il 1988
+	
+	-  comando in phpMyAdmin: 
+	SELECT * FROM `ospiti` WHERE `date_of_birth` > 	'1988-01-01'
+
+Seleziona tutti gli ospiti che hanno più di 20 anni (al momento dell’esecuzione della query)
+
+	-  comando in phpMyAdmin: 
+	SELECT * FROM `ospiti` WHERE `date_of_birth` <  '2000-01-01'
+
+Seleziona tutti gli ospiti il cui nome inizia con la D
+
+	- comando in phpMyAdmin: 
+
+	SELECT * FROM `ospiti` WHERE `name` LIKE 'D%'
+
+Qual è il prezzo massimo pagato?
+
+	
+	- comando in phpMyAdmin: 
+	 SELECT * FROM `pagamenti` ORDER BY `price` DESC
+
+Seleziona gli ospiti riconosciuti con patente e nati nel 1975
+
+	comando in phpMyAdmin: 
+
+	- SELECT * FROM `ospiti` WHERE `document_type` = 	"Driver 	License" AND `date_of_birth` LIKE "1975%"
